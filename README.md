@@ -36,6 +36,12 @@ expr 2 + 2 * 2     = 6
 expr ( 2 + 2 ) * 2 = 8
 ```
 
+And You can use python Math Functions:
+```
+pow(2, 2) = 4
+2 + pow(2, 2) = 6
+```
+
 ## Development
 
 ```
