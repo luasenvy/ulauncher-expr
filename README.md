@@ -52,6 +52,12 @@ There are a variety of issues with the vulnerability, but the following document
 * [Code injection](https://en.wikipedia.org/wiki/Code_injection)
 * [Why is using 'eval' a bad practice?](https://stackoverflow.com/questions/1832940/why-is-using-eval-a-bad-practice)
 
+## Icon
+
+[Calculator Icon](https://www.iconfinder.com/icons/532810/accountant_accounting_calculate_calculation_calculator_math_mathematics_icon) by [Eezy](https://www.iconfinder.com/Vecteezy) in [E-commerce And Shopping](https://www.iconfinder.com/iconsets/e-commerce-and-shopping-3) find with [iconfinder](https://www.iconfinder.com/search/?q=calculator&price=free&type=vector&style=flat)
+
+Creative Commons (Attribution-Share Alike 3.0 Unported)
+
 ## Development
 
 ```
