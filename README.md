@@ -36,11 +36,21 @@ expr 2 + 2 * 2     = 6
 expr ( 2 + 2 ) * 2 = 8
 ```
 
-And You can use python Math Functions:
+And You can use python `math` Class and `expression`:
 ```
-pow(2, 2) = 4
-2 + pow(2, 2) = 6
+math.pow(2, 2)         = 4
+2 + math.pow(2, 2)     = 6
+'py' * 5          = 'pypypypypy'
+'hello' + 'world' = 'helloworld'
 ```
+
+**IMPORTANT** Python's `eval` function can be dangerous.
+global variables are restricted to use only math. But use careful.
+
+There are a variety of issues with the vulnerability, but the following documents provide a brief overview.
+
+* [Code injection](https://en.wikipedia.org/wiki/Code_injection)
+* [Why is using 'eval' a bad practice?](https://stackoverflow.com/questions/1832940/why-is-using-eval-a-bad-practice)
 
 ## Development
 

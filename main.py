@@ -1,4 +1,4 @@
-import logging
+import math
 from ulauncher.api.client.Extension import Extension
 from ulauncher.api.client.EventListener import EventListener
 from ulauncher.api.shared.event import KeywordQueryEvent, ItemEnterEvent
@@ -7,12 +7,9 @@ from ulauncher.api.shared.action.RenderResultListAction import RenderResultListA
 from ulauncher.api.shared.action.ExtensionCustomAction import ExtensionCustomAction
 from ulauncher.api.shared.action.CopyToClipboardAction import CopyToClipboardAction
 
-logger = logging.getLogger(__name__)
-
 class ExprExtension(Extension):
 
   def __init__(self):
-    logger.info('init Expr Extension')
     super(ExprExtension, self).__init__()
     self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
 
@@ -20,16 +17,21 @@ class KeywordQueryEventListener(EventListener):
 
   def on_event(self, event, extension):
     items = []
-
     expression = event.get_argument()
-    result = eval(expression)
+    try:
+      result = str(eval(expression, { '__builtins__': None, 'math': math }))
 
-    items = []
-    items.append(ExtensionResultItem(icon='images/icon.png',
-      name='Expr: %s = %s' % ( str(expression), str(result) ),
-      description='Press \'enter\' to copy to clipboard.',
-      on_enter=CopyToClipboardAction(str(result))
-    ))
+      items.append(ExtensionResultItem(icon='images/icon.png',
+        name='Expr: %s = %s' % ( expression, result ),
+        description='Press \'enter\' to copy to clipboard.',
+        on_enter=CopyToClipboardAction(result)
+      ))
+    except NameError as errorMessage:
+      items.append(ExtensionResultItem(icon='images/icon.png',
+        name='Expr: %s' % errorMessage,
+        description='Expression has Error.',
+        on_enter=CopyToClipboardAction(errorMessage)
+      ))
 
     return RenderResultListAction(items)
 
