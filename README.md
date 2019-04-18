@@ -8,7 +8,7 @@
 
 Evaluate the formula using [`Python eval()`](https://docs.python.org/2/library/functions.html#eval).
 
-## Examples
+## Useful Examples
 
 Arithmetic Operation:
 ```
@@ -16,23 +16,26 @@ expr 1 + 1 = 2
 expr 2 * 4 = 8
 ```
 
-Using [`Math`](https://docs.python.org/2/library/math.html#module-math) Functions:
+[`Math`](https://docs.python.org/2/library/math.html#module-math) Functions:
 ```
 expr math.pow(2, 5)   = 32.0
 expr math.floor(10.5) = 10.0
 ```
 
-Using [`Python String Expression`](https://docs.python.org/2/reference/expressions.html):
+[`Python String Expression`](https://docs.python.org/2/reference/expressions.html):
 ```
 expr 1000 >> 1  = 500
 expr 'x' == 'x' = True
 ```
 
-Using [`Python String Format`](https://docs.python.org/2/library/string.html#format-string-syntax):
+[`Python String Format`](https://docs.python.org/2/library/string.html#format-string-syntax)
+
+[`Python String Format Examples`](https://docs.python.org/2/library/string.html#format-examples):
 ```
 expr '{0}, {1}!'.format('hello', 'world') = hello, world!
 expr '%s, %s!' % ('hello', 'world')       = hello, world!
 expr 'py' * 3                             = pypypy
+expr '{:,}'.format(10000000)              = 10,000,000
 ```
 
 ## More Informations
