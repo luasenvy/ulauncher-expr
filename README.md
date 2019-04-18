@@ -1,10 +1,63 @@
 # Ulauncher Expr
 
+![demo](demo.gif)
+
 > [ulauncher](https://ulauncher.io/) Extension for A Simple Calculator.
 
-## Usage
+## Features
 
-![demo](demo.gif)
+Evaluate the formula using [`Python eval()`](https://docs.python.org/2/library/functions.html#eval).
+
+## Examples
+
+Arithmetic Operation:
+```
+expr 1 + 1 = 2
+expr 2 * 4 = 8
+```
+
+Using [`Math`](https://docs.python.org/2/library/math.html#module-math) Functions:
+```
+expr math.pow(2, 5)   = 32.0
+expr math.floor(10.5) = 10.0
+```
+
+Using [`Python String Expression`](https://docs.python.org/2/reference/expressions.html):
+```
+expr 1000 >> 1  = 500
+expr 'x' == 'x' = True
+```
+
+Using [`Python String Format`](https://docs.python.org/2/library/string.html#format-string-syntax):
+```
+expr '{0}, {1}!'.format('hello', 'world') = hello, world!
+expr '%s, %s!' % ('hello', 'world')       = hello, world!
+expr 'py' * 3                             = pypypy
+```
+
+## More Informations
+
+When you want float result, concat `.0` to expression:
+```
+expr 10 / 3   = 3
+expr 10 / 3.0 = 3.33333333
+```
+
+You can use braket:
+```
+expr 2 + 2 * 2     = 6
+expr ( 2 + 2 ) * 2 = 8
+```
+
+## Risks of `eval()`
+
+**IMPORTANT** Python's `eval` function can be dangerous.
+global variables are restricted to use only math. But use careful.
+
+There are a variety of issues with the vulnerability, but the following documents provide a brief overview.
+
+* [Code injection](https://en.wikipedia.org/wiki/Code_injection)
+* [Why is using 'eval' a bad practice?](https://stackoverflow.com/questions/1832940/why-is-using-eval-a-bad-practice)
 
 ## Requirements
 
@@ -18,39 +71,6 @@ Open ulauncher preferences window -> extensions -> add extension and paste the f
 ```
 https://github.com/luasenvy/ulauncher-expr
 ```
-
-## Usage
-
-This plugin calcaulating with `python eval()`
-
-When you want float result
-concat `.0` to expression:
-```
-expr 10 / 3   = 3
-expr 10 / 3.0 = 3.33333333
-```
-
-You can use braket:
-```
-expr 2 + 2 * 2     = 6
-expr ( 2 + 2 ) * 2 = 8
-```
-
-And You can use python `math` Class and `expression`:
-```
-math.pow(2, 2)         = 4
-2 + math.pow(2, 2)     = 6
-'py' * 5          = 'pypypypypy'
-'hello' + 'world' = 'helloworld'
-```
-
-**IMPORTANT** Python's `eval` function can be dangerous.
-global variables are restricted to use only math. But use careful.
-
-There are a variety of issues with the vulnerability, but the following documents provide a brief overview.
-
-* [Code injection](https://en.wikipedia.org/wiki/Code_injection)
-* [Why is using 'eval' a bad practice?](https://stackoverflow.com/questions/1832940/why-is-using-eval-a-bad-practice)
 
 ## Icon
 
