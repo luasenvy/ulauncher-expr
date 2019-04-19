@@ -2,7 +2,7 @@
 
 ![demo](demo.gif)
 
-> [ulauncher](https://ulauncher.io/) Extension for A Simple Calculator.
+> [ulauncher](https://ulauncher.io/) Extension for A Python Expression Evaluator.
 
 ## Features
 
@@ -52,10 +52,15 @@ expr 2 + 2 * 2     = 6
 expr ( 2 + 2 ) * 2 = 8
 ```
 
+**IMPORTANT** Restricted to use only `math` Functions:
+```
+expr dir()         // name 'dir' is not defined
+```
+
 ## Risks of `eval()`
 
 **IMPORTANT** Python's `eval` function can be dangerous.
-global variables are restricted to use only math. But use careful.
+global variables are restricted to use only `math` Functions. But use careful.
 
 There are a variety of issues with the vulnerability, but the following documents provide a brief overview.
 
