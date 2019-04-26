@@ -90,8 +90,8 @@ https://github.com/luasenvy/ulauncher-expr
 
 ```
 git clone https://github.com/luasenvy/ulauncher-expr
-cd ~/.cache/ulauncher_cache/extensions/ulauncher-expr
-ln -s <repo_location> ulauncher-expr
+cd ~/.cache/ulauncher_cache/extensions/
+ln -s <repo_location>
 ```
 
 To see your changes, stop ulauncher and run it from the command line with:
