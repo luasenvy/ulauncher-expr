@@ -1,8 +1,8 @@
 {
     "manifest_version": "2",
-    "api_version": "1",
+    "required_api_version": "^2.0.0",
     "name": "Expr",
-    "description": "Simple Calculator",
+    "description": "Ulauncher Extension - Python Expression Evaluator",
     "developer_name": "luasenvy",
     "icon": "images/icon.png",
     "options": {
