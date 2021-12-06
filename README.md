@@ -90,7 +90,7 @@ https://github.com/luasenvy/ulauncher-expr
 
 ```
 git clone https://github.com/luasenvy/ulauncher-expr
-cd ~/.cache/ulauncher_cache/extensions/
+cd ~/.local/share/ulauncher/extensions/
 ln -s <repo_location>
 ```
 
